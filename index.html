@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
     <title>index</title>
 </head>
@@ -13,11 +14,24 @@
     <div id="page">
       <h1>Javascript 計算機</h1>
         <div class="computer">
-            <input class="result" type="text" value="0">
-            <div class="button-region">
-                <input class="button" type="button" value="1">
-                <input class="button" type="button" value="2">
-                <input class="button" type="button" value="3">
+            <input id="result" type="text" value="0">
+            <div class="button-wrapper button-num-region">
+                <input class="button" type="button" value="1" onclick="numOput(1);">
+                <input class="button" type="button" value="2" onclick="numOput(2);">
+                <input class="button" type="button" value="3" onclick="numOput(3);">
+                <input class="button" type="button" value="4" onclick="numOput(4);">
+                <input class="button" type="button" value="5" onclick="numOput(5);">
+                <input class="button" type="button" value="6" onclick="numOput(6);">
+            </div>
+            <div class="button-wrapper button-ctr">
+                <input class="button plus" type="button" value="+" onclick="temp();">
+                <input class="button less" type="button" value="-" onclick="temp();">
+                <input class="button multiply" type="button" value="*" onclick="temp();">
+                <input class="button except" type="button" value="/" onclick="temp();">
+            </div>
+            <div class ="button-wrapper button-nav">
+                <input type="button" value="c" onclick="numReSet()">
+                <input type="button" value="=" onclick="numReSet()">
             </div>
         </div>
     </div>
