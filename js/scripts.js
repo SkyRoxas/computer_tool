@@ -1,3 +1,8 @@
+//暫存區
+var tempNum = 0;
+var numFun = "";
+
+
 function numOput($num) {
     if (document.getElementById('result').value == 0) {
         document.getElementById('result').value = $num;
@@ -6,16 +11,44 @@ function numOput($num) {
     }
 }
 
-function numReSet() {
-    document.getElementById('result').value = 0;
+function numFunSet($fun) {
+    numFun = $fun;
+    console.log('numFum:' + numFun);
+    return numFun;
 }
 
 function temp() {
-    var temp = document.getElementById('result').value;
+    tempNum = document.getElementById('result').value;
     document.getElementById('result').value = 0;
 
-    console.log("temp:" + temp);
+    console.log("tempNum:" + tempNum);
 
-    return temp;
+    return tempNum;
+
+}
+
+
+function numReSet() {
+    document.getElementById('result').value = 0;
+    tempNum = 0;
+}
+
+
+function result() {
+    var resultNum = document.getElementById('result').value;
+    switch (numFun) {
+        case '+':
+            document.getElementById('result').value = parseFloat(tempNum) + parseFloat(resultNum);
+            break;
+        case '-':
+            document.getElementById('result').value = parseFloat(tempNum) - parseFloat(resultNum);
+            break;
+        case '*':
+            document.getElementById('result').value = parseFloat(tempNum) * parseFloat(resultNum);
+            break;
+        case '/':
+            document.getElementById('result').value = parseFloat(tempNum) / parseFloat(resultNum);
+            break;
+    }
 
 }

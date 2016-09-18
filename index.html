@@ -12,26 +12,36 @@
 <body>
     <header id="header"></header>
     <div id="page">
-      <h1>Javascript 計算機</h1>
+        <h1>Javascript 計算機</h1>
         <div class="computer">
             <input id="result" type="text" value="0">
             <div class="button-wrapper button-num-region">
-                <input class="button" type="button" value="1" onclick="numOput(1);">
-                <input class="button" type="button" value="2" onclick="numOput(2);">
-                <input class="button" type="button" value="3" onclick="numOput(3);">
-                <input class="button" type="button" value="4" onclick="numOput(4);">
-                <input class="button" type="button" value="5" onclick="numOput(5);">
-                <input class="button" type="button" value="6" onclick="numOput(6);">
+                <div class="button-wrapper">
+                    <input class="button" type="button" value="1" onclick="numOput(1);">
+                    <input class="button" type="button" value="2" onclick="numOput(2);">
+                    <input class="button" type="button" value="3" onclick="numOput(3);">
+                    <input class="button" type="button" value="4" onclick="numOput(4);">
+                    <input class="button" type="button" value="5" onclick="numOput(5);">
+                    <input class="button" type="button" value="6" onclick="numOput(6);">
+                    <input class="button" type="button" value="7" onclick="numOput(7);">
+                    <input class="button" type="button" value="8" onclick="numOput(8);">
+                    <input class="button" type="button" value="9" onclick="numOput(9);">
+                    <input class="button" type="button" value="0" onclick="numOput(0);">
+                </div>
+                <div class="button-wrapper">
+                    <input class="button" type="button" value="." onclick="numOput('.');">
+                    <input class="button" type="button" value="-" onclick="numOput('-');">
+                </div>
             </div>
             <div class="button-wrapper button-ctr">
-                <input class="button plus" type="button" value="+" onclick="temp();">
-                <input class="button less" type="button" value="-" onclick="temp();">
-                <input class="button multiply" type="button" value="*" onclick="temp();">
-                <input class="button except" type="button" value="/" onclick="temp();">
+                <input class="button plus" type="button" value="+" onclick="temp();numFunSet('+');">
+                <input class="button less" type="button" value="-" onclick="temp();numFunSet('-');">
+                <input class="button multiply" type="button" value="*" onclick="temp();numFunSet('*');">
+                <input class="button except" type="button" value="/" onclick="temp();numFunSet('/');">
             </div>
-            <div class ="button-wrapper button-nav">
-                <input type="button" value="c" onclick="numReSet()">
-                <input type="button" value="=" onclick="numReSet()">
+            <div class="button-wrapper button-nav">
+                <input type="button" value="AC" onclick="numReSet()">
+                <input type="button" value="=" onclick="result()">
             </div>
         </div>
     </div>
